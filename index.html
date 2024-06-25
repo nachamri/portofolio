@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Fernanda Amri Hakim</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      background-color: #f0f0f0;
+      padding-top: 56px;
+    }
+    .navbar {
+      margin-bottom: 20px;
+    }
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .portfolio-item .caption {
+      margin-top: 10px;
+    }
+    .bg-custom {
+      background-color: #343a40;
+      color: white;
+      padding: 40px 0;
+    }
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    .slideInDown {
+      animation-name: slideInDownAnimation;
+    }
+    @keyframes slideInDownAnimation {
+      from {
+        transform: translateY(-100%);
+        visibility: visible;
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    .search-form {
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      margin-right: 5px;
+    }
+    .search-btn {
+      margin-left: 5px;
+    }
+    @media (max-width: 768px) {
+      .search-form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .search-btn {
+        margin-top: 5px;
+        margin-left: 0;
+      }
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    .bio-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #696969;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .bio-content img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    /* Enhanced background animation */
+    @keyframes backgroundAnimation {
+      0% { background-color: black; }
+      33% { background-color: gray; }
+      66% { background-color: white; }
+      100% { background-color: black; }
+    }
+    .animated-background {
+      animation: backgroundAnimation 15s linear infinite;
+    }
+    /* Card animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+
+    @media (max-width: 992px) {
+  .bio-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-item .card-body {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+    .bio-content {
+      padding: 15px;
+      font-size: 14px;
+    }
+    .portfolio-item .card-body {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  </style>
+</head>
+<body class="animated-background">
+  <header>
+    <h1>Fernanda Amri Hakim</h1>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top animated slideInDown">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Portofolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#project" data-section="project">Proyek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-section="about">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-section="contact">Kontak</a>
+            </li>
+          </ul>
+          <div class="search-form">
+            <form class="d-flex" role="search" id="searchForm">
+              <input class="form-control search-input me-2" type="search" placeholder="Cari" aria-label="Search" id="searchInput">
+              <button class="btn btn-success search-btn" type="submit">Cari</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="project" class="container mt-5">
+    <div id="portfolio" class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card h-100 portfolio-item">
+          <img src="image2.jpg" class="card-img-top" alt="Proyek 1">
+          <div class="card-body">
+            <h5 class="card-title">Data pribadi</h5>
+            <p class="card-text">NAMA: FERNANDA AMRI HAKIM .</p>
+            <p class="card-text">KELAS: TI 4C .</p>
+            <p class="card-text">NIM: 221101077 .</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-custom text-center">
+    <div class="container">
+      <div class="bio-content">
+        <img src="image1.jpg" alt="Fernanda Amri Hakim">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang mahasiswa di Universitas Sunan Giri Bojonegoro, saya berada di Fakultas Sains dan Teknologi mengambil program studi Teknik Informatika.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container mt-5">
+    <div class="bio-content">
+      <h2>Kontak</h2>
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Alamat Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Pesan</label>
+          <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Fernanda Amri Hakim's Portfolio. All rights reserved.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#project">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(item => {
+      item.addEventListener('click', function(event) {
+        event.preventDefault();
+        let sectionId = this.getAttribute('data-section');
+        document.getElementById(sectionId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let input = document.getElementById('searchInput').value.toLowerCase();
+      let portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      portfolioItems.forEach(item => {
+        let caption = item.querySelector('.card-title').innerText.toLowerCase();
+        if (caption.includes(input)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+
+    // Intersection Observer for adding animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeIn');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Animate project cards when they come into view
+    const projectObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeInUp');
+          projectObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      projectObserver.observe(item);
+    });
+  </script>
+</body>
+</html>
